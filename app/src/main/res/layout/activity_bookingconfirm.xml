@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.booking.activity.BookingConfirmActivity">
+
+    <ImageView
+        android:id="@+id/ivBookingConfBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/left_arrow"
+        android:tint="@color/colorBlack"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clNoData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookingConfBack">
+        <TextView
+            android:id="@+id/nodata_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nodata"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:textColor="#c1c1c1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookingConfBack">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBooingConfProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:elevation="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/transparent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivBooingConfProfile"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/group_445"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDrivername"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunitosans_semibold"
+                    android:text="Amare"
+                    android:textAlignment="viewStart"
+                    android:textColor="#232323"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/ivBooingConfview"
+                    app:layout_constraintEnd_toStartOf="@+id/ivBooingConfCar"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfProfile" />
+
+
+                <TextView
+                    android:id="@+id/tvBooingConfPas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:fontFamily="@font/nunitosans_semibold"
+                    android:text="4 passengers"
+                    android:textColor="#929292"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfPas"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBooingConfview" />
+
+                <ImageView
+                    android:id="@+id/ivBooingConfPas"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/audience"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfPas"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfview"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBooingConfview" />
+
+                <View
+                    android:id="@+id/ivBooingConfview"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivBooingConfProfile"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfProfile"
+                    app:layout_constraintTop_toTopOf="@+id/ivBooingConfProfile" />
+
+                <ImageView
+                    android:id="@+id/ivBooingConfCar"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/swift_desire_1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfPas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvBooingConfPas"
+                    app:layout_constraintTop_toTopOf="@+id/ivBooingConfProfile" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTimeVa"
+                    app:layout_constraintEnd_toEndOf="@+id/ivBooingConfCar"
+                    app:layout_constraintStart_toEndOf="@+id/tvBooingConfPas"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBooingConfCar">
+
+                    <ImageView
+                        android:id="@+id/ivCircle"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:src="@drawable/ellipse_497"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvSource"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvSource" />
+
+                    <TextView
+                        android:id="@+id/tvSource"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nunitosans_bold"
+                        android:maxLines="2"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Bismaya"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivCircle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/viewVrtical"
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/line_19"
+                        app:layout_constraintBottom_toTopOf="@+id/ivmapDestination"
+                        app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+                        app:layout_constraintStart_toStartOf="@+id/ivCircle"
+                        app:layout_constraintTop_toBottomOf="@+id/ivCircle" />
+
+                    <ImageView
+                        android:id="@+id/ivmapDestination"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/pin_2"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvDestination"
+                        app:layout_constraintStart_toStartOf="@id/ivCircle"
+                        app:layout_constraintTop_toTopOf="@+id/tvDestination" />
+
+                    <TextView
+                        android:id="@+id/tvDestination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/nunitosans_bold"
+                        android:maxLines="2"
+                        android:textAlignment="viewStart"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Baghdad in the Begin of Mohamed al Kasim Highway   "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivmapDestination"
+                        app:layout_constraintTop_toBottomOf="@+id/viewVrtical" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBooingConfRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:elevation="2dp"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivBooingConfProfile"
+                    app:layout_constraintStart_toStartOf="@+id/ivBooingConfProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBooingConfProfile">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginVertical="@dimen/_2sdp">
+
+                        <ImageView
+                            android:id="@+id/ivBooingConfStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:src="@drawable/star_1"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfRating"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvBooingConfRating" />
+
+                        <TextView
+                            android:id="@+id/tvBooingConfRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:fontFamily="@font/nunitosans_bold"
+                            android:text="4.7"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_11sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivBooingConfStar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvBooingConfTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:text="July 24, 2020, 9:58 AM"
+                    android:textColor="#222b45"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/tvBooingConfPas"
+                    app:layout_constraintStart_toStartOf="@+id/ivBooingConfProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/cvBooingConfRating" />
+
+                <ImageView
+                    android:id="@+id/ivBooingConfIrd"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/iraq_40_237283"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfValue"
+                    app:layout_constraintStart_toStartOf="@+id/tvBooingConfTime"
+                    app:layout_constraintTop_toTopOf="@+id/tvBooingConfValue" />
+
+                <TextView
+                    android:id="@+id/tvBooingConfValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="5000.14"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfIrd"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBooingConfTime"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/ivBooingConfclock"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:src="@drawable/group_38"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTimeVa"
+                    app:layout_constraintStart_toEndOf="@+id/tvBooingConfValue"
+                    app:layout_constraintTop_toTopOf="@+id/tvBooingConfTimeVa" />
+
+                <TextView
+                    android:id="@+id/tvBooingConfTimeVa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="15 Min"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tvBooingConfTime"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfclock"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBooingConfTime"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvBooingConfCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/round_corner_bg_green"
+            android:fontFamily="@font/nunitosans_regular"
+            android:gravity="center"
+            android:text="@string/call"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooingConfCancel"
+            app:layout_constraintStart_toStartOf="@id/cvBooingConfProfile"
+            app:layout_constraintTop_toBottomOf="@+id/cvBooingConfProfile" />
+
+        <TextView
+            android:id="@+id/tvCallStaus2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/round_corner_bg_green"
+            android:fontFamily="@font/nunitosans_regular"
+            android:gravity="center"
+            android:text="@string/call"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="@+id/cvBooingConfProfile"
+            app:layout_constraintStart_toStartOf="@id/cvBooingConfProfile"
+            app:layout_constraintTop_toBottomOf="@+id/cvBooingConfProfile" />
+
+            <TextView
+                android:id="@+id/tvBooingConfCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_bg_red"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvBooingConfProfile"
+                app:layout_constraintStart_toEndOf="@+id/tvBooingConfCall"
+                app:layout_constraintTop_toBottomOf="@+id/cvBooingConfProfile" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBookingConfRoute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooingConfCancel"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfCall"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfCall">
+
+            <ImageView
+                android:id="@+id/ivBooingConfCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ellipse_497"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfSource"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvBooingConfSource" />
+
+            <TextView
+                android:id="@+id/tvBooingConfSource"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitosans_bold"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_50sdp"
+                android:text="Bismaya"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivBooingConfCircle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/viewBooingConfHoriz"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="#33000000"
+                app:layout_constraintBottom_toTopOf="@+id/ivmapBooingConfDestination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvBooingConfSource"
+                app:layout_constraintTop_toBottomOf="@+id/ivBooingConfCircle" />
+
+            <ImageView
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/line_19"
+                app:layout_constraintBottom_toTopOf="@+id/ivmapBooingConfDestination"
+                app:layout_constraintEnd_toEndOf="@+id/ivBooingConfCircle"
+                app:layout_constraintStart_toStartOf="@+id/ivBooingConfCircle"
+                app:layout_constraintTop_toBottomOf="@+id/ivBooingConfCircle" />
+
+            <ImageView
+                android:id="@+id/ivmapBooingConfDestination"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/pin_2"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfDestination"
+                app:layout_constraintStart_toStartOf="@id/ivBooingConfCircle"
+                app:layout_constraintTop_toTopOf="@+id/tvBooingConfDestination" />
+
+            <TextView
+                android:id="@+id/tvBooingConfDestination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitosans_bold"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_50sdp"
+                android:textAlignment="viewStart"
+                android:text="Baghdad in the Begin of Mohamed al Kasim Highway   "
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivmapBooingConfDestination"
+                app:layout_constraintTop_toBottomOf="@+id/viewBooingConfHoriz" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvBooingConfFairEst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:gravity="center"
+            android:text="@string/fareestimation"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="@+id/clBookingConfRoute"
+            app:layout_constraintTop_toBottomOf="@+id/clBookingConfRoute" />
+
+        <TextView
+            android:id="@+id/tvBooingConfTotalFair"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:text="@string/totaltripfare"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooingConfTotalcurrency"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfFairEst"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfFairEst" />
+
+        <TextView
+            android:id="@+id/tvBooingConfTotalcurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:text="IRD"
+            android:textColor="#929292"
+            android:textSize="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTotalFair"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooingConfTotalFairVal"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfTotalFair"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfTotalFair" />
+
+        <TextView
+            android:id="@+id/tvBooingConfTotalFairVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_bold"
+            android:text="25.50"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTotalFair"
+            app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfTotalcurrency"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfTotalFair" />
+
+        <View
+            android:id="@+id/tvBooingConfFairView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="#33000000"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooingConfTotalFairVal"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfTotalFair"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfTotalFair" />
+
+
+        <TextView
+            android:id="@+id/tvBooingConfDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:text="@string/distance"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooingConfDistanceVal"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfFairView"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfFairView" />
+
+
+        <TextView
+            android:id="@+id/tvBooingConfDistanceVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_regular"
+            android:text="30 KM"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfDistance"
+            app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfDistance"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfDistance" />
+
+        <View
+            android:id="@+id/tvBooingConfDistanceView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="#33000000"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooingConfDistanceVal"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfDistance"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfDistance" />
+
+
+        <TextView
+            android:id="@+id/tvBooingConfDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:text="@string/duration"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toStartOf="@+id/tvBooingConfDurationVal"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfFairView"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfDistanceView" />
+
+
+        <TextView
+            android:id="@+id/tvBooingConfDurationVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_regular"
+            android:text="40 Min"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfDuration"
+            app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfDuration"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfDuration" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="#33000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooingConfDurationVal"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfDuration"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfDuration"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

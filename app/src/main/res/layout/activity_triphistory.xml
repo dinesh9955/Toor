@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.tripHistory.TripHistoryActivity">
+
+    <ImageView
+        android:id="@+id/ivTripHistoryBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/left_arrow"
+        android:tint="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTripHistoryTitle" />
+
+    <TextView
+        android:id="@+id/tvTripHistoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:text="@string/tripHistory"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/viewExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewExplore"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintBottom_toTopOf="@+id/clswitchExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clNoData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewExplore">
+        <TextView
+            android:id="@+id/nodata_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Currently no data found."
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:textColor="#c1c1c1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewExplore">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTripHistoryProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:elevation="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/transparent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivTripHistoryProfile"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:src="@drawable/group_445"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDriverfullname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:text="User Name"
+                        android:textAlignment="viewStart"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#232323"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintBottom_toTopOf="@+id/ivTripHistoryview"
+                        app:layout_constraintEnd_toStartOf="@+id/ivTripHistoryCar"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryProfile" />
+
+
+                    <TextView
+                        android:id="@+id/tvTripHistoryPas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:text="4 passengers"
+                        android:textColor="#929292"
+                        android:textSize="@dimen/_8sdp"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryPas"
+                        app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryview" />
+
+                    <ImageView
+                        android:id="@+id/ivTripHistoryPas"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/audience"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryPas"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryview"
+                        app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryview" />
+
+                    <View
+                        android:id="@+id/ivTripHistoryview"
+                        android:layout_width="0.5dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivTripHistoryProfile"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryProfile"
+                        app:layout_constraintTop_toTopOf="@+id/ivTripHistoryProfile" />
+
+                    <ImageView
+                        android:id="@+id/ivTripHistoryCar"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/swift_desire_1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryPas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/tvTripHistoryPas"
+                        app:layout_constraintTop_toTopOf="@+id/ivTripHistoryProfile" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryTimeVa"
+                        app:layout_constraintEnd_toEndOf="@+id/ivTripHistoryCar"
+                        app:layout_constraintStart_toEndOf="@+id/tvTripHistoryPas"
+                        app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryCar">
+
+                        <ImageView
+                            android:id="@+id/ivCircle"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:src="@drawable/ellipse_497"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvSource"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvSource" />
+
+                        <TextView
+                            android:id="@+id/tvSource"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_bold"
+                            android:maxLines="2"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="Bismaya"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivCircle"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/viewVrtical"
+                            android:layout_width="@dimen/_3sdp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/line_19"
+                            app:layout_constraintBottom_toTopOf="@+id/ivmapDestination"
+                            app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+                            app:layout_constraintStart_toStartOf="@+id/ivCircle"
+                            app:layout_constraintTop_toBottomOf="@+id/ivCircle" />
+
+                        <ImageView
+                            android:id="@+id/ivmapDestination"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/pin_2"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvDestination"
+                            app:layout_constraintStart_toStartOf="@id/ivCircle"
+                            app:layout_constraintTop_toTopOf="@+id/tvDestination" />
+
+                        <TextView
+                            android:id="@+id/tvDestination"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/nunitosans_bold"
+                            android:maxLines="2"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="Baghdad in the Begin of Mohamed al Kasim Highway   "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivmapDestination"
+                            app:layout_constraintTop_toBottomOf="@+id/viewVrtical" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvTripHistoryRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:elevation="2dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/ivTripHistoryProfile"
+                        app:layout_constraintStart_toStartOf="@+id/ivTripHistoryProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryProfile">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginVertical="@dimen/_2sdp">
+
+                            <ImageView
+                                android:id="@+id/ivTripHistoryStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_2sdp"
+                                android:src="@drawable/star_1"
+                                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryRating"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryRating" />
+
+                            <TextView
+                                android:id="@+id/tvTripHistoryRating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:fontFamily="@font/nunitosans_bold"
+                                android:text="4.7"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_11sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivTripHistoryStar"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/tvTripHistoryTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/nunitosans_regular"
+                        android:text="July 24, 2020, 9:58 AM"
+                        android:textColor="#222b45"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryPas"
+                        app:layout_constraintStart_toStartOf="@+id/ivTripHistoryProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/cvTripHistoryRating" />
+
+                    <ImageView
+                        android:id="@+id/ivTripHistoryIrd"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:src="@drawable/iraq_40_237283"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryValue"
+                        app:layout_constraintStart_toStartOf="@+id/tvTripHistoryTime"
+                        app:layout_constraintTop_toTopOf="@+id/tvTripHistoryValue" />
+
+                    <TextView
+                        android:id="@+id/tvTripHistoryValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/nunitosans_bold"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:text="5000.14"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryIrd"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryTime"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/ivTripHistoryclock"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/group_38"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryTimeVa"
+                        app:layout_constraintStart_toEndOf="@+id/tvTripHistoryValue"
+                        app:layout_constraintTop_toTopOf="@+id/tvTripHistoryTimeVa" />
+
+                    <TextView
+                        android:id="@+id/tvTripHistoryTimeVa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/nunitosans_bold"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:text="15 Min"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivTripHistoryclock"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryTime"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvTripHistoryEstPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:gravity="center"
+                android:text="@string/totalpayout"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvTripHistoryProfile"
+                app:layout_constraintStart_toStartOf="@id/cvTripHistoryProfile"
+                app:layout_constraintTop_toBottomOf="@+id/cvTripHistoryProfile" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTripHistoryEstPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryEstPay"
+                app:layout_constraintStart_toStartOf="@id/tvTripHistoryEstPay"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryEstPay">
+
+                <ImageView
+                    android:id="@+id/ivTripHistoryEstPayVal"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/iraq_40_237283"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryEstPayVal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTripHistoryEstPayVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:gravity="center"
+                    android:text="25.50"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivTripHistoryEstPayVal"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBookingConfRoute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@+id/cvTripHistoryProfile"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryEstPay"
+                app:layout_constraintTop_toBottomOf="@+id/clTripHistoryEstPay">
+
+                <ImageView
+                    android:id="@+id/ivTripHistoryCircle"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:src="@drawable/ellipse_497"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTripHistorySource"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvTripHistorySource" />
+
+                <TextView
+                    android:id="@+id/tvTripHistorySource"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:textAlignment="viewStart"
+                    android:text="Bismaya"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivTripHistoryCircle"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/viewTripHistoryHoriz"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="#33000000"
+                    app:layout_constraintBottom_toTopOf="@+id/ivmapTripHistoryDestination"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvTripHistorySource"
+                    app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryCircle" />
+
+                <ImageView
+                    android:layout_width="@dimen/_3sdp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/line_19"
+                    app:layout_constraintBottom_toTopOf="@+id/ivmapTripHistoryDestination"
+                    app:layout_constraintEnd_toEndOf="@+id/ivTripHistoryCircle"
+                    app:layout_constraintStart_toStartOf="@+id/ivTripHistoryCircle"
+                    app:layout_constraintTop_toBottomOf="@+id/ivTripHistoryCircle" />
+
+                <ImageView
+                    android:id="@+id/ivmapTripHistoryDestination"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/pin_2"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryDestination"
+                    app:layout_constraintStart_toStartOf="@id/ivTripHistoryCircle"
+                    app:layout_constraintTop_toTopOf="@+id/tvTripHistoryDestination" />
+
+                <TextView
+                    android:id="@+id/tvTripHistoryDestination"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:textAlignment="viewStart"
+                    android:text="Baghdad in the Begin of Mohamed al Kasim Highway   "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/ivmapTripHistoryDestination"
+                    app:layout_constraintTop_toBottomOf="@+id/viewTripHistoryHoriz" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTripHistoryFairEst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:gravity="center"
+                android:text="@string/fareestimation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="@+id/clBookingConfRoute"
+                app:layout_constraintTop_toBottomOf="@+id/clBookingConfRoute" />
+
+            <TextView
+                android:id="@+id/tvTripHistoryTotalFair"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="@string/totaltripfare"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryTotalcurrency"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryFairEst"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryFairEst" />
+
+            <TextView
+                android:id="@+id/tvTripHistoryTotalcurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="IRD"
+                android:textColor="#929292"
+                android:textSize="@dimen/_7sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryTotalFair"
+                app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryTotalFairVal"
+                app:layout_constraintStart_toEndOf="@+id/tvTripHistoryTotalFair"
+                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryTotalFair" />
+
+            <TextView
+                android:id="@+id/tvTripHistoryTotalFairVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="25.50"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryTotalFair"
+                app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+                app:layout_constraintStart_toEndOf="@+id/tvTripHistoryTotalcurrency"
+                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryTotalFair" />
+
+            <View
+                android:id="@+id/tvTripHistoryFairView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#33000000"
+                app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryTotalFairVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryTotalFair"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryTotalFair" />
+
+
+            <TextView
+                android:id="@+id/tvTripHistoryDistance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="@string/distance"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryDistanceVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryFairView"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryFairView" />
+
+
+            <TextView
+                android:id="@+id/tvTripHistoryDistanceVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="30 KM"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryDistance"
+                app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+                app:layout_constraintStart_toEndOf="@+id/tvTripHistoryDistance"
+                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryDistance" />
+
+            <View
+                android:id="@+id/tvTripHistoryDistanceView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="#33000000"
+                app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryDistanceVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryDistance"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryDistance" />
+
+
+            <TextView
+                android:id="@+id/tvTripHistoryDuration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="@string/duration"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryDurationVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryFairView"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryDistanceView" />
+
+
+            <TextView
+                android:id="@+id/tvTripHistoryDurationVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="40 Min"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryDuration"
+                app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+                app:layout_constraintStart_toEndOf="@+id/tvTripHistoryDuration"
+                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryDuration" />
+
+            <View
+                android:id="@+id/tvTripHistoryDurationView"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="#33000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryDurationVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryDuration"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryDuration"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvTripHistoryStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="@string/status"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvTripHistoryStatusVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryFairView"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryDurationView" />
+
+
+            <TextView
+                android:id="@+id/tvTripHistoryStatusVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_bold"
+                android:textColor="#ff3030"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTripHistoryStatus"
+                app:layout_constraintEnd_toEndOf="@+id/clBookingConfRoute"
+                app:layout_constraintStart_toEndOf="@+id/tvTripHistoryStatus"
+                app:layout_constraintTop_toTopOf="@+id/tvTripHistoryStatus" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="#33000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTripHistoryStatusVal"
+                app:layout_constraintStart_toStartOf="@+id/tvTripHistoryStatus"
+                app:layout_constraintTop_toBottomOf="@+id/tvTripHistoryStatus"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

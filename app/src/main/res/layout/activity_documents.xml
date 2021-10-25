@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.documents.DocumentsActivity">
+
+    <ImageView
+        android:id="@+id/ivDocumentBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:src="@drawable/left_arrow"
+        android:tint="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDocumentTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDocumentTitle" />
+
+
+    <TextView
+        android:id="@+id/tvDocumentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:text="@string/documents"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivDocumentBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDocument"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintBottom_toTopOf="@+id/rvExplore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDocumentTitle" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLicense"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:elevation="2dp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDocument">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivDocumentLicense"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_105sdp"
+                android:scaleType="fitXY"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvDocumentLicense"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDocumentLicense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="@string/drivinglicense"
+                android:textColor="#747474"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDocumentLicense"
+                app:layout_constraintStart_toEndOf="@+id/ivDocumentLicense"
+                app:layout_constraintTop_toTopOf="@+id/ivDocumentLicense"
+                app:layout_constraintVertical_bias="0.38" />
+
+            <TextView
+                android:id="@+id/tvDocumentLicenseChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/nunitosans_semibold"
+                android:textSize="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:background="@drawable/bg_document"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDocumentLicense"
+                app:layout_constraintStart_toStartOf="@+id/tvDocumentLicense"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:elevation="2dp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvLicense">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivDocumentContract"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_105sdp"
+                android:scaleType="fitXY"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvDocumentContract"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDocumentContract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="@string/contractcopy"
+                android:textColor="#747474"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDocumentContract"
+                app:layout_constraintStart_toEndOf="@+id/ivDocumentContract"
+                app:layout_constraintTop_toTopOf="@+id/ivDocumentContract"
+                app:layout_constraintVertical_bias="0.38" />
+
+            <TextView
+                android:id="@+id/tvDocumentContractChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/nunitosans_semibold"
+                android:textSize="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_document"
+                app:layout_constraintTop_toBottomOf="@+id/tvDocumentContract"
+                app:layout_constraintStart_toStartOf="@+id/tvDocumentContract"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

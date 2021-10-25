@@ -1,0 +1,32 @@
+package com.wisam.taxi.model.driverResponse.register
+
+data class Data(
+    val __v: Int,
+    val _id: String,
+    val authToken: String,
+    val buildingNumber: String,
+    val countryCode: String,
+    val createdAt: String,
+    val date: Long,
+    val deviceId: String,
+    val deviceType: String,
+    val facebookId: String,
+    val flatNumber: String,
+    val fullName: String,
+    val googleId: String,
+    val hash: String,
+    val id: String,
+    val isApproved: Boolean,
+    val isAvailable: Int,
+    val isSocialRegister: Int,
+    val isVerified: Boolean,
+    val latitude: Double,
+    val longitude: Double,
+    val passenger: String,
+    val phone: String,
+    val profilePic: String,
+    val sendNoti: Int,
+    val updatedAt: String,
+    val vehicleModel: String,
+    val vehicleNumber: String
+)

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.driverModule.rateToCustomer.RateToCustomerActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivRateToCustomerProfile"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvRateToCustomerProc"
+        app:layout_constraintStart_toStartOf="@+id/tvRateToCustomerProc"
+        app:layout_constraintTop_toBottomOf="@+id/tvRateToCustomerProc" />
+
+
+
+    <TextView
+        android:id="@+id/tvRateToCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#222b45"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@+id/ivRateToCustomerProfile"
+        app:layout_constraintStart_toStartOf="@+id/ivRateToCustomerProfile"
+        app:layout_constraintTop_toBottomOf="@+id/ivRateToCustomerProfile" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRateToCustomerRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/tvRateToCustomerName"
+        app:layout_constraintStart_toStartOf="@+id/tvRateToCustomerName"
+        app:layout_constraintTop_toBottomOf="@+id/tvRateToCustomerName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivRateToCustomerStar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/star_1"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRateToCustomerRating"
+                app:layout_constraintEnd_toStartOf="@+id/tvRateToCustomerRating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvRateToCustomerRating" />
+
+
+            <TextView
+                android:id="@+id/tvRateToCustomerRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="4.2"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivRateToCustomerStar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/tvRateToCustomerTick"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/circle_bg"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/animated_check"
+        app:layout_constraintBottom_toTopOf="@+id/tvRateToCustomerProc"
+        app:layout_constraintEnd_toEndOf="@+id/tvRateToCustomerProc"
+        app:layout_constraintStart_toStartOf="@+id/tvRateToCustomerProc" />
+
+
+    <TextView
+        android:id="@+id/tvRateToCustomerProc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/ridecomplete"
+        android:textColor="#222b45"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998" />
+
+    <RatingBar
+        android:id="@+id/ivRateToCustomerRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="5"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:theme="@style/RatingBar"
+        app:layout_constraintBottom_toTopOf="@+id/tvRateToCustomerSubmit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvRateToCustomerRating" />
+
+
+    <TextView
+        android:id="@+id/tvRateToCustomerSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/round_corner_bg"
+        android:fontFamily="@font/nunitosans_regular"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRateToCustomerRating"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

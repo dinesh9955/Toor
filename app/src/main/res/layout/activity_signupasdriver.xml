@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.register.SignUpAsDriverActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivSignUpDriverBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/left_arrow"
+                android:tint="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/create_account"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivSignUpDriverBack" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpAs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/signup_as_driver"
+                android:textColor="#919191"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpTitle" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivSignUpDriverProfile"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:src="@drawable/group_22826"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpAs" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/fullname"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivSignUpDriverProfile" />
+
+
+            <EditText
+                android:id="@+id/etSignupDriverFullName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/user_2"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/fullname"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpFullName" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/mobile_number_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupDriverFullName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cletNewConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpMobile">
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:src="@drawable/phone_call"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/edtSignupDriverCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_regular"
+                    app:defaultCode="964"
+                    app:hideNameCode="true"
+                    android:focusable="false"
+                    android:clickable="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivPhone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showFlag="true"
+                    app:showFullName="false"
+                    app:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/clCodePicker"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/edtSignupDriverCountryCode"
+                    app:layout_constraintEnd_toEndOf="@id/edtSignupDriverCountryCode"
+                    app:layout_constraintStart_toStartOf="@id/edtSignupDriverCountryCode"
+                    app:layout_constraintTop_toTopOf="@id/edtSignupDriverCountryCode" />
+
+
+                <EditText
+                    android:id="@+id/etSignupDriverMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edtSignupDriverCountryCode"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvDriverSignUpEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/kind_of_car"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cletNewConfirmPassword" />
+
+            <EditText
+                android:id="@+id/clspinnerDriverKindCar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/cab"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/kind_of_car"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpEmail"/>
+
+            <TextView
+                android:id="@+id/tvDriverVehicleModel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/vehiclemodel"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clspinnerDriverKindCar" />
+
+            <EditText
+                android:id="@+id/edtVehicleModel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/cab"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/vehiclemodel"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverVehicleModel"/>
+
+
+            <TextView
+                android:id="@+id/tvDriverSignUpAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingLeft="@dimen/_20sdp"
+                android:text="@string/building_no"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtVehicleModel" />
+
+
+            <EditText
+                android:id="@+id/etSignupDriverBuilding"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/hotel_with_three_floors"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/building_no"
+                android:inputType="text"
+                android:textAlignment="viewStart"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/clspinnerDriverKindCar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpAddress" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpFlatNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/flat_no"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupDriverBuilding" />
+
+
+            <EditText
+                android:id="@+id/etSignupFlatNo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/home_run"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/flat_no"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/clspinnerDriverKindCar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpFlatNo" />
+
+
+            <TextView
+                android:id="@+id/tvDriverSignUpPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/password_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupFlatNo" />
+
+
+            <EditText
+                android:id="@+id/etSignupDriverPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/noun_lock_2396540"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/password_signup"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpPassword" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUpConfPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/confirmpassword_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupDriverPassword" />
+
+
+            <EditText
+                android:id="@+id/etSignupDriverConfPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/noun_lock_2396540"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUpConfPassword" />
+
+            <TextView
+                android:id="@+id/tvDriverUploadContract"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/upload_contract_copy"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupDriverConfPassword" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@id/clDriverUploadContract"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="@dimen/_20sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/etSignupDriverConfPassword"
+                    app:layout_constraintStart_toStartOf="@+id/etSignupDriverConfPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDriverUploadContract">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round_stroke">
+
+                        <ImageView
+                            android:id="@+id/ivDriverUploadContractLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_stroke"
+                            android:backgroundTint="@color/colorBlack"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivDriverUploadContractSmall"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:backgroundTint="@color/colorBlack"
+                            android:padding="@dimen/_10sdp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/plus"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvDriverUploadLicense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/upload_license"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clDriverUploadContract" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clDriverUploadLicense"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="@dimen/_20sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/etSignupDriverConfPassword"
+                    app:layout_constraintStart_toStartOf="@+id/etSignupDriverConfPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDriverUploadLicense">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/round_stroke">
+
+                        <ImageView
+                            android:id="@+id/ivDriverUploadLicenseLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_stroke"
+                            android:backgroundTint="@color/colorBlack"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivDriverUploadLicenseSmall"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:backgroundTint="@color/colorBlack"
+                            android:padding="@dimen/_10sdp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/plus"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            <CheckBox
+                android:id="@+id/ivcheckedBoxDriver"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/group_22828"
+                android:theme="@style/welcomeCheckboxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDriverSignUpDriverIAccept"
+                app:layout_constraintEnd_toStartOf="@+id/tvDriverSignUpDriverIAccept"
+                app:layout_constraintStart_toStartOf="@+id/etSignupDriverBuilding"
+                app:layout_constraintTop_toTopOf="@+id/tvDriverSignUpDriverIAccept" />
+
+
+            <TextView
+                android:id="@+id/tvDriverSignUpDriverIAccept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivcheckedBoxDriver"
+                app:layout_constraintTop_toBottomOf="@+id/clDriverUploadLicense" />
+
+            <TextView
+                android:id="@+id/tvDriverSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/round_corner_bg"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivcheckedBoxDriver" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvDriverSignUp"
+                app:layout_constraintStart_toStartOf="@+id/tvDriverSignUp"
+                app:layout_constraintTop_toBottomOf="@+id/tvDriverSignUp"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/tvDriverSignUpAlreadyHave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/already_member"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDriverSignUpAlreadyLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDriverSignUpAlreadyLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/login_welcome"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvDriverSignUpAlreadyHave"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
+    android:gravity="start|top"
+    android:fontFamily="@font/nunitosans_regular"
+    android:inputType="textPersonName"
+    android:maxLines="1"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    android:hint="Full Name"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/_12sdp" />

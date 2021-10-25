@@ -1,0 +1,189 @@
+<resources>
+    <string name="app_name">Toor</string>
+
+<!--    <string name="facebook_app_id">658270215001076</string>-->
+    <string name="facebook_app_id">807606200022270</string>
+<!--    <string name="fb_login_protocol_scheme">fb658270215001076</string>-->
+    <string name="fb_login_protocol_scheme">fb807606200022270</string>
+
+    <!-- Splash Screen -->
+    <string name="easy_booking">Easy Booking</string>
+    <string name="easy_bookingsubTitle">Book taxi at your finger tips.</string>
+    <string name="login_as_a_customer">Login as a Customer</string>
+    <string name="login_as_a_driver">Login as a Driver</string>
+
+    <!-- Forgot Screen -->
+    <string name="forgot_password">Forgot Password</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="next">Next</string>
+
+    <!-- New Password Screen -->
+    <string name="reset_password">Reset Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="save">Save</string>
+
+    <!-- SignUp Screen -->
+    <string name="create_account">Create Account,</string>
+    <string name="signup_as_customer">Sign up as a Customer</string>
+    <string name="signup_as_driver">Sign up as a Driver</string>
+    <string name="fullname">Full Name</string>
+    <string name="email">E-Mail</string>
+    <string name="i_accept_signup">I accept Terms of services &amp; Privacy Policy of Basmaya.</string>
+    <string name="mobile_number_signup">Mobile Number</string>
+    <string name="password_signup">Password</string>
+    <string name="confirmpassword_signup">Confirm Password</string>
+    <string name="upload_contract_copy">Upload Contract Copy</string>
+    <string name="upload_license">Upload License</string>
+    <string name="address">Address</string>
+    <string name="signup">Sign Up</string>
+    <string name="already_member">I"'"m already a member,</string>
+    <string name="kind_of_car">Vehicle Name</string>
+    <string name="building_no">Building Name</string>
+    <string name="flat_no">Flat No.</string>
+
+    <string name="iaccept">I accept&#032;</string>
+    <string name="termsservice">Terms of Services &#032;</string>
+    <string name="and"> &amp; &#032;</string>
+    <string name="privacypolicy">Privacy Policy&#032;</string>
+    <string name="ofbasmaya"> of Toor.</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome">Welcome,</string>
+    <string name="login_as_customer_welcome">Login as a Customer</string>
+    <string name="login_welcome">Login</string>
+    <string name="or_welcome">Or</string>
+    <string name="rememberme">Remember Me</string>
+    <string name="password_welcome">Password</string>
+    <string name="iamnewUser_welcome">I"'"m a new user,</string>
+
+
+    <!-- OTP Verification Screen -->
+    <string name="otpverify_title">Let"'"s Verify Your Number</string>
+    <string name="enter_the_3digit_number">Enter the 4 - digit code sent to you at</string>
+    <string name="verify_otp">Verify</string>
+    <string name="resend">Resend</string>
+
+    <!-- Accept Ride Screen -->
+    <string name="you_will_arrive">You will arrive at</string>
+
+    <!-- Change Password Screen -->
+    <string name="changepassword">Change Password</string>
+    <string name="currentpassword">Current Password</string>
+
+
+    <!-- ChooseActive Screen -->
+    <string name="choose_active">For Driver Choose Active Without Time</string>
+
+    <!-- MyTrip Screen -->
+    <string name="ongoing">Ongoing</string>
+    <string name="past">Past</string>
+    <string name="turn_onLocation">Turn on Location Services to Allow \"Toor\" to Determine Your Location.</string>
+    <string name="turn_oncall">Turn on Phone Call Permission to Allow \"Toor\" to avail this feature.</string>
+
+    <!-- HomeActivity Screen -->
+
+    <string name="explore">Explore</string>
+    <string name="myTrips">My Trips</string>
+    <string name="settings">Settings</string>
+    <string name="documents">Documents</string>
+    <string name="language">Language</string>
+    <string name="about">About Us</string>
+    <string name="fAQ">FAQ</string>
+    <string name="logout">Log out</string>
+    <string name="nobooking">Currently no booking found.</string>
+    <string name="nodata">Currently no data found.</string>
+
+    <!-- Routes Screen -->
+    <string name="active">Active</string>
+    <string name="inactive">In-Active</string>
+    <string name="choosepreferlang">Choose Your Preferred Language</string>
+    <string name="plsselectLanguage">Please Select Your Language</string>
+    <string name="english">English</string>
+    <string name="arabic">Arabic</string>
+    <string name="profile">Profile</string>
+
+    <string name="forgot_passwordlogin">Forgot Password?</string>
+    <string name="signuplogin">Sign Up</string>
+    <string name="pleaseconfirm">Please Confirm</string>
+    <string name="areyousuretocontinue">Are you sure you want to continue?</string>
+    <string name="continuee">Continue</string>
+
+    <string name="wouldyouliketologout">Would you like to logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="sessionexpired">Your session has expired.</string>
+    <string name="name">Name</string>
+    <string name="ridecomplete">Your ride has been completed.</string>
+    <string name="submit">Submit</string>
+    <string name="done">Done</string>
+    <string name="allrides">All Rides</string>
+    <string name="completed">Completed</string>
+    <string name="complete">Complete</string>
+    <string name="start">Start</string>
+    <string name="tripHistory">Trip History</string>
+    <string name="fareestimation">Fare Estimation</string>
+    <string name="totaltripfare">Total Trip Fare</string>
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string name="status">Status</string>
+    <string name="passengers">passengers</string>
+    <string name="acceptride">Accept Ride</string>
+    <string name="weareprocessing">We are processing your booking…</string>
+    <string name="totalpayout">Total Payout</string>
+
+
+    <string name="pleaseuploadprofilepic">Please upload a profile image.</string>
+    <string name="pleaseentercountrycode">Please select a country code.</string>
+    <string name="pleaseenterfullname">Please enter your full name.</string>
+    <string name="pleaseentermobileNo">Please enter your mobile number.</string>
+    <string name="pleaseentervalidphone">Please enter a valid mobile number.</string>
+    <string name="pleaseentervalidemail">Please enter a valid email address.</string>
+    <string name="pleaseenterpassword">Please enter password.</string>
+    <string name="pleaseentercurrentpassword">Please enter current password.</string>
+    <string name="pleaseenternewpassword">Please enter new password</string>
+    <string name="pleaseentervalidcurrentpassword">Please enter valid current password.</string>
+    <string name="pleaseenterconfirmpassword">Please enter confirm password.</string>
+    <string name="passdonotmatch">Your password and confirm password does not match.</string>
+    <string name="pleaseenteraddress">Please enter address.</string>
+    <string name="passwordlength">Password length should be 8 or more</string>
+    <string name="newpasswordlength">New password length should be 8 or more</string>
+    <string name="confirmpasswordlength">Confirm password length should be 8 or more</string>
+
+    <string name="pleaseselctcartype">Please enter vehicle name</string>
+    <string name="pleaseentervehiclemodel">Please enter your vehicle model</string>
+    <string name="enterbuildingname">Please enter your building name.</string>
+    <string name="enterflatno">Please enter your flat number.</string>
+    <string name="uploadcontractcopy">Please upload a copy of contract document</string>
+    <string name="uploadlicensedoc">Please upload a copy of license document</string>
+
+
+    <string name="entervalidotp">Please enter valid OTP.</string>
+    <string name="entervalidpassword">Please enter valid password.</string>
+    <string name="filldetailstocontinue">Fill Details to Continue</string>
+
+    <string name="nodriverfoundnearyou">No driver found near to you. Please try latter</string>
+    <string name="noActivedriver">This route has no active driver.</string>
+
+    <string name="stringmin">Min</string>
+    <string name="stringkm">KM</string>
+    <string name="profileupdated">Profile updated successfully.</string>
+    <string name="mobilenonotverified">Mobile number is not verified.</string>
+    <string name="ridecanceledbycustomer">Ride is canceled by the customer.</string>
+    <string name="drivinglicense">Driving License</string>
+    <string name="contractcopy">Contract Copy</string>
+    <string name="change">Change</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="choose">Choose</string>
+    <string name="rideiscanceledbydriver">Ride is canceled by the driver.</string>
+    <string name="call">Call</string>
+    <string name="unknownerroroccured">Unknown error occurred..please try again</string>
+    <string name="somethingwentwrongtryagain">Something went wrong..Please try again</string>
+    <string name="drivers">Drivers Available</string>
+    <string name="driver">Driver Available</string>
+    <string name="pleaseaccepttermandcondition">Please accept our Terms of Services and Privacy Policy.</string>
+    <string name="pleaseselectcountrycode">Please select a country code.</string>
+    <string name="vehiclemodel">Vehicle Model</string>
+
+
+</resources>

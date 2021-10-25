@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Toor</string>
+
+    <string name="facebook_app_id">658270215001076</string>
+    <string name="fb_login_protocol_scheme">fb658270215001076</string>
+
+    <!-- Splash Screen -->
+    <string name="easy_booking">الحجز السريع</string>
+    <string name="easy_bookingsubTitle">حجز سيارة أجرة في متناول يدك.</string>
+    <string name="login_as_a_customer">تسجيل دخول الراكب</string>
+    <string name="login_as_a_driver">تسجيل دخول السائق</string>
+
+    <!-- Forgot Screen -->
+    <string name="forgot_password">نسيت كلمة المرور</string>
+    <string name="mobile_number">رقم التلفون</string>
+    <string name="next">التالي</string>
+
+    <!-- New Password Screen -->
+    <string name="reset_password">اعادة تعيين كلمة مرور جديدة</string>
+    <string name="new_password">كلمة مرور جديدة</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="save">حفظ</string>
+
+    <!-- SignUp Screen -->
+    <string name="create_account">انشاء حساب</string>
+    <string name="signup_as_customer">سجل كزبون (راكب)</string>
+    <string name="signup_as_driver">سجل كسائق</string>
+    <string name="fullname">الاسم الكامل</string>
+    <string name="email">الايميل</string>
+    <string name="i_accept_signup">اوافق على الشروط والاحكام</string>
+    <string name="mobile_number_signup">رقم التلفون</string>
+    <string name="password_signup">كلمة المرور</string>
+    <string name="confirmpassword_signup">تأكيد كلمة المرور</string>
+    <string name="upload_contract_copy">ارفع نسخة العقد السكن</string>
+    <string name="upload_license">ارفع نسخة اجازة السوق</string>
+    <string name="address">العنوان</string>
+    <string name="signup">التسجيل</string>
+    <string name="already_member">انا بالفعل مسجل سابقا</string>
+    <string name="kind_of_car">اسم المركبة</string>
+    <string name="building_no">رقم البناية</string>
+    <string name="flat_no">رقم الشقة</string>
+
+    <string name="iaccept">انا اوافق </string>
+    <string name="termsservice">الشروط والاحكام </string>
+    <string name="and"> رمز </string>
+    <string name="privacypolicy">سياسة الخصوصية</string>
+    <string name="ofbasmaya"> عن تور</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome">اهلا وسهل</string>
+    <string name="login_as_customer_welcome">تسجيل الدخول كزبون (راكب)</string>
+    <string name="login_welcome">دخول</string>
+    <string name="or_welcome">أو</string>
+    <string name="rememberme">تذكرني</string>
+    <string name="password_welcome">كلمة المرور</string>
+    <string name="iamnewUser_welcome">انا مشترك جديد</string>
+
+
+    <!-- OTP Verification Screen -->
+    <string name="otpverify_title">لنقم بتأكيد الرقم</string>
+    <string name="enter_the_3digit_number">ادخل الاربع ارقام التي ارسلت لك على</string>
+    <string name="verify_otp">تأكيد</string>
+    <string name="resend">اعادة ارسال</string>
+
+    <!-- Accept Ride Screen -->
+    <string name="you_will_arrive">سوف تصل في تمام الساعة</string>
+
+    <!-- Change Password Screen -->
+    <string name="changepassword">تغيير كلمة المرور</string>
+    <string name="currentpassword">كلمة المرور الحالية</string>
+
+
+    <!-- ChooseActive Screen -->
+    <string name="choose_active">فترة عمل مفتوحة بدون وقت</string>
+
+    <!-- MyTrip Screen -->
+    <string name="ongoing">خرج</string>
+    <string name="past">السابق</string>
+    <string name="turn_onLocation">قم بتشغيل خدمة الجي بي اس ليتم معرفة مكانك من قبل برنامج تور</string>
+    <string name="turn_oncall">قم بالموافقة على الاتصالات مع برنامج تور</string>
+
+    <!-- HomeActivity Screen -->
+
+    <string name="explore">تصفح</string>
+    <string name="myTrips">رحلاتي</string>
+    <string name="settings">اعدادات</string>
+    <string name="documents">وثائق</string>
+    <string name="language">اللغة</string>
+    <string name="about">معلومات عنا</string>
+    <string name="fAQ">التعليمات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="nobooking">لحد الان ليس هنالك حجوزات متوفرة</string>
+    <string name="nodata">ليس هنالك معلومات متوفرة</string>
+
+    <!-- Routes Screen -->
+    <string name="active">مفعل</string>
+    <string name="inactive">غير نشط</string>
+    <string name="choosepreferlang">اختر لغتك المفضلة</string>
+    <string name="plsselectLanguage">ارجوك اختر لغتك</string>
+    <string name="english">انكليزي</string>
+    <string name="arabic">عربي</string>
+    <string name="profile">مظهر جانبي</string>
+
+    <string name="forgot_passwordlogin">هل نسيت كلمة المرور؟</string>
+    <string name="signuplogin">سجل</string>
+
+    <string name="pleaseconfirm">يرجى تأكيد</string>
+    <string name="areyousuretocontinue">هل تريد الاستمرار؟</string>
+    <string name="continuee">استمر</string>
+
+    <string name="wouldyouliketologout">هل تود تسجيل الخروج ؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="sessionexpired">وقت تسجيل دخولك للتطبيق انتهى .</string>
+    <string name="name">اسم</string>
+
+    <string name="ridecomplete">الرحلة اكتملت</string>
+    <string name="submit">إرسال</string>
+    <string name="done">منجز</string>
+    <string name="allrides">جميع الرحلات</string>
+    <string name="completed">منجز</string>
+    <string name="complete">اكتمال</string>
+    <string name="start">بداية</string>
+
+    <string name="tripHistory">سجل الرحلة</string>
+    <string name="fareestimation">تقدير الأجرة</string>
+    <string name="totaltripfare">طول الرحلة كاملة</string>
+    <string name="distance">مسافة</string>
+    <string name="duration">المدة الزمنية</string>
+    <string name="status">الحالة</string>
+    <string name="passengers">ركاب</string>
+    <string name="acceptride">قبول ركوب</string>
+    <string name="weareprocessing">نحن نعمل على طلبك</string>
+    <string name="totalpayout">إجمالي العائد</string>
+
+    <string name="pleaseuploadprofilepic">ارجوك ارفع صورتك الشخصية</string>
+    <string name="pleaseentercountrycode">ارجوك ادخل رقم كود بلدك</string>
+    <string name="pleaseenterfullname">ارجوك ادخل اسمك الكامل</string>
+    <string name="pleaseentermobileNo">ارجوك ادخل رقم الهاتف</string>
+    <string name="pleaseentervalidphone">الرجاء إدخال رقم جوال صحيح.</string>
+    <string name="pleaseentervalidemail">ارجوك ادخل ايميل فعال</string>
+    <string name="pleaseenterpassword">ارجوك ادخل الرقم المرور</string>
+    <string name="pleaseentercurrentpassword">يرجى إدخال كلمة المرور الحالية.</string>
+    <string name="pleaseenternewpassword">يرجى إدخال كلمة المرور الجديدة</string>
+    <string name="pleaseentervalidcurrentpassword">يرجى إدخال كلمة المرور الحالية الصالحة.</string>
+    <string name="pleaseenterconfirmpassword">ارجوك ادخل كلمة المرور مرة اخرى للتأكيد</string>
+    <string name="passdonotmatch">تأكيد كلمة المرور غير مطابقة</string>
+    <string name="pleaseenteraddress">ارجوك ادخل العنوان</string>
+    <string name="passwordlength">كلمة المرور يجب ان تكون 8 احرف او اكثر</string>
+    <string name="newpasswordlength">يجب أن يكون طول كلمة المرور الجديدة 8 أو أكثر</string>
+    <string name="confirmpasswordlength"> تأكيد كلمة المرور يجب ان تتكون من 8 احرف او اكثر</string>
+
+    <string name="pleaseselctcartype">الرجاء إدخال اسم السيارة</string>
+    <string name="pleaseentervehiclemodel">الرجاء إدخال طراز سيارتك</string>
+    <string name="enterbuildingname">ارجوك ادخل رقم البناية</string>
+    <string name="enterflatno">ارجوك ادهل رقم الشقة</string>
+    <string name="uploadcontractcopy">ارجوك قم برقع نسخة عقد السكن</string>
+    <string name="uploadlicensedoc">ارجوك قم برفع نسخة اجازة السوق</string>
+
+
+    <string name="entervalidotp">ارجوك قم بأدخال OTP  نافذ</string>
+    <string name="entervalidpassword">يرجى إدخال كلمة مرور صالحة.</string>
+    <string name="filldetailstocontinue">املأ التفاصيل للمتابعة</string>
+
+    <string name="nodriverfoundnearyou">لم يتم العثور على سائق بالقرب منك. يرجى المحاولة الأخيرة</string>
+    <string name="noActivedriver">هذا المسار ليس لديه سائق نشط.</string>
+    <string name="stringmin">الحد الأدنى</string>
+    <string name="stringkm">كم</string>
+    <string name="profileupdated">تم تحديث الملف الشخصي بنجاح.</string>
+    <string name="mobilenonotverified">لم يتم التحقق من رقم الهاتف المحمول.</string>
+
+
+    <string name="ridecanceledbycustomer">الرحلة الغيت من قبل الزبون</string>
+    <string name="drivinglicense">رخصة قيادة</string>
+    <string name="contractcopy">نسخة العقد</string>
+    <string name="change">يتغيرون</string>
+
+
+    <string name="camera">الة تصوير</string>
+    <string name="gallery">صالة عرض</string>
+    <string name="choose">أختر</string>
+
+
+    <string name="rideiscanceledbydriver">تم إلغاء الركوب من قبل السائق.</string>
+    <string name="call">مكالمة</string>
+
+    <string name="unknownerroroccured">حدث خطأ غير معروف.. يرجى المحاولة مرة أخرى</string>
+    <string name="somethingwentwrongtryagain">حدث خطأ ما. أعد المحاولة من فضلك</string>
+    <string name="drivers">السائقين المتاحة</string>
+    <string name="driver">سائق متاح</string>
+
+    <string name="pleaseaccepttermandcondition">يُرجى قبول شروط الخدمات وسياسة الخصوصية الخاصة بنا.</string>
+    <string name="pleaseselectcountrycode">الرجاء تحديد رمز البلد.</string>
+
+</resources>

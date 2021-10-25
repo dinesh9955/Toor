@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.register.SignUpAsCustActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivSignUpBack"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/left_arrow"
+                android:tint="@color/colorBlack"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSignUpTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/create_account"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivSignUpBack" />
+
+            <TextView
+                android:id="@+id/tvsignUpAs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/signup_as_customer"
+                android:textColor="#919191"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignUpTitle" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivSignUpProfilePic"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvsignUpAs"
+                android:src="@drawable/group_22826"
+                android:layout_marginVertical="@dimen/_8sdp"/>
+
+            <TextView
+                android:id="@+id/tvSignupFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/fullname"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivSignUpProfilePic" />
+
+
+            <EditText
+                android:id="@+id/etSignupFullName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:drawableStart="@drawable/user_2"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:hint="@string/fullname"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupFullName" />
+
+            <TextView
+                android:id="@+id/tvSignupMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/mobile_number_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupFullName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cletNewConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupMobile">
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/phone_call"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/edtSignupCountryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivPhone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showFlag="true"
+                    app:defaultCode="964"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:fontFamily="@font/nunitosans_regular"
+                    app:showFullName="false"
+                    app:hideNameCode="true"
+                    app:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/clCodePicker"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/edtSignupCountryCode"
+                    app:layout_constraintEnd_toEndOf="@id/edtSignupCountryCode"
+                    app:layout_constraintStart_toStartOf="@id/edtSignupCountryCode"
+                    app:layout_constraintTop_toTopOf="@id/edtSignupCountryCode" />
+
+
+                <EditText
+                    android:id="@+id/etSignupMobile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:hint="@string/mobile_number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edtSignupCountryCode"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvSignupEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/email"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cletNewConfirmPassword" />
+
+
+                <EditText
+                    android:id="@+id/etSignupEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:drawableStart="@drawable/noun_message_1985244"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/round_stroke"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:hint="@string/email"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSignupEmail"/>
+
+            <TextView
+                android:id="@+id/tvSignupPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/password_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupEmail" />
+
+
+            <EditText
+                android:id="@+id/etSignupPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableStart="@drawable/noun_lock_2396540"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:hint="@string/password_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupPassword"/>
+
+            <TextView
+                android:id="@+id/tvSignupConfPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/confirmpassword_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupPassword" />
+
+
+            <EditText
+                android:id="@+id/etSignupConfPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableStart="@drawable/noun_lock_2396540"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:hint="@string/confirm_password"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupConfPassword"/>
+
+
+            <TextView
+                android:id="@+id/tvSignupAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/address"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupConfPassword" />
+
+
+            <EditText
+                android:id="@+id/etSignupAddress"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableStart="@drawable/hotel_with_three_floors"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/building_no"
+                android:textAlignment="viewStart"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/etSignupAddress2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupAddress"/>
+
+            <EditText
+                android:id="@+id/etSignupAddress2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:drawableStart="@drawable/home_run"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/flat_no"
+                android:textAlignment="viewStart"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_stroke"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etSignupAddress"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignupAddress"/>
+
+
+            <CheckBox
+                android:id="@+id/ivcheckedBox"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_5sdp"
+                android:theme="@style/welcomeCheckboxStyle"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSignupIAccept"
+                app:layout_constraintEnd_toStartOf="@+id/tvSignupIAccept"
+                app:layout_constraintStart_toStartOf="@+id/etSignupAddress"
+                app:layout_constraintTop_toTopOf="@+id/tvSignupIAccept"/>
+
+            <TextView
+                android:id="@+id/tvSignupIAccept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="start"
+                android:maxLines="2"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/i_accept_signup"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:layout_constraintStart_toEndOf="@+id/ivcheckedBox"
+                app:layout_constraintTop_toBottomOf="@+id/etSignupAddress" />
+
+            <TextView
+                android:id="@+id/tvSignUpbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/round_corner_bg"
+                android:fontFamily="@font/nunitosans_regular"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivcheckedBox" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvSignUpbtn"
+                app:layout_constraintStart_toStartOf="@+id/tvSignUpbtn"
+                app:layout_constraintTop_toBottomOf="@+id/tvSignUpbtn"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/tvSignUpAlreadyHave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_regular"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/already_member"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSignUpAlreadyLogin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSignUpAlreadyLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/login_welcome"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvSignUpAlreadyHave"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

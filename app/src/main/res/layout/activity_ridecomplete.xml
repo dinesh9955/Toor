@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.rideComplete.RideCompleteActivity">
+
+    <ImageView
+        android:id="@+id/tvRideCompleteTick"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/circle_bg"
+        android:paddingStart="@dimen/_3sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/animated_check"
+        app:layout_constraintBottom_toTopOf="@+id/tvBookingProc"
+        app:layout_constraintEnd_toEndOf="@+id/tvBookingProc"
+        app:layout_constraintStart_toStartOf="@+id/tvBookingProc" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivRideCompleteProfile"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvBookingProc"
+        app:layout_constraintStart_toStartOf="@+id/tvBookingProc"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookingProc" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRideCompleteRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/ivRideCompleteProfile"
+        app:layout_constraintStart_toStartOf="@+id/ivRideCompleteProfile"
+        app:layout_constraintTop_toBottomOf="@+id/ivRideCompleteProfile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivRideCompleteStar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/star_1"
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRideCompleteRating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvRideCompleteRating" />
+
+
+            <TextView
+                android:id="@+id/tvRideCompleteRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_bold"
+                android:text="4.7"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivRideCompleteStar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvRideCompleteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_semibold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#222b45"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="@+id/ivRideCompleteProfile"
+        app:layout_constraintStart_toStartOf="@+id/ivRideCompleteProfile"
+        app:layout_constraintTop_toBottomOf="@+id/cvRideCompleteRating" />
+
+
+    <TextView
+        android:id="@+id/tvBookingProc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/ridecomplete"
+        android:textColor="#222b45"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <ImageView
+        android:id="@+id/ivRideCompleteCar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/swift_desire_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRideCompleteName" />
+
+    <RatingBar
+        android:id="@+id/ivRideCompleteRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:numStars="5"
+        android:stepSize="1"
+        android:rating="5"
+        android:theme="@style/RatingBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRideCompleteCar" />
+
+
+    <TextView
+        android:id="@+id/tvRideCompleteSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/round_corner_bg"
+        android:fontFamily="@font/nunitosans_regular"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivRideCompleteRating"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

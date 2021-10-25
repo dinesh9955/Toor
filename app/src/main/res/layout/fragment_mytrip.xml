@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.home.fragments.MyTripFragment">
+
+    <TextView
+        android:id="@+id/tvMyTripsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:text="@string/myTrips"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/viewMyTrips"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewMyTrips"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintBottom_toTopOf="@+id/tvOnGoing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyTripsTitle" />
+
+    <TextView
+        android:id="@+id/tvOnGoing"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="@string/ongoing"
+        android:textColor="#0b8793"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintEnd_toStartOf="@+id/tvPast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewMyTrips" />
+
+    <TextView
+        android:id="@+id/tvPast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="@string/past"
+        android:textColor="#c1c1c1"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOnGoing"
+        app:layout_constraintTop_toTopOf="@+id/tvOnGoing" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyTripsOngoing"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/tab_unselected"
+        android:theme="@style/CustomRvTheme"
+        app:layout_constraintBottom_toTopOf="@+id/pbLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnGoing" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyTripsPast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/tab_unselected"
+        android:theme="@style/CustomRvTheme"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/pbLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnGoing" />
+
+    <LinearLayout
+        android:id="@+id/pbLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <ProgressBar
+            android:id="@+id/loadingPB"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/nobooking_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:text="@string/nobooking"
+        android:textColor="#c1c1c1"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnGoing" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

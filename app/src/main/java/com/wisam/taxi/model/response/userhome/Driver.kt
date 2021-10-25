@@ -1,0 +1,32 @@
+package com.wisam.taxi.model.response.userhome
+
+data class Driver(
+    val __v: Int,
+    val _id: String,
+    val authToken: String,
+    val buildingNumber: String,
+    val countryCode: String,
+    val createdAt: String,
+    val date: Long,
+    val deviceId: String,
+    val deviceType: String,
+    val facebookId: String,
+    val flatNumber: String,
+    val fullName: String,
+    val googleId: String,
+    val hash: String,
+    val isApproved: Boolean,
+    val isAvailable: Int,
+    val isSocialRegister: Int,
+    val isVerified: Boolean,
+    val latitude: Double,
+    val longitude: Double,
+    val phone: String,
+    val profilePic: String,
+    val route: String,
+    val sendNoti: Int,
+    val status: Int,
+    val updatedAt: String,
+    val vehicleTypeId: String,
+    val vehicletypes: Vehicletypes
+)

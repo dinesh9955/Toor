@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner_bg_without_padding"
+        android:backgroundTint="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/tvSocialTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:gravity="center"
+            android:text="@string/filldetailstocontinue"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSocialMobNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:paddingStart="@dimen/_20sdp"
+            android:text="@string/mobile_number"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSocialTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cletSocialMobile"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/round_stroke"
+            android:fontFamily="@font/nunitosans_regular"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSocialMobNo">
+
+            <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/phone_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/edtSocialCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivPhone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showFlag="true"
+                app:defaultCode="964"
+                android:fontFamily="@font/nunitosans_regular"
+                app:showFullName="false"
+                app:hideNameCode="true"
+                app:textSize="@dimen/_12sdp" />
+
+
+            <EditText
+                android:id="@+id/etSocialMobile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/nunitosans_regular"
+                android:inputType="number"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:paddingEnd="@dimen/_10sdp"
+                android:hint="@string/mobile_number"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtSocialCountryCode"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvSocialEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:gravity="start"
+            android:textAlignment="viewStart"
+            android:paddingStart="@dimen/_20sdp"
+            android:text="@string/email"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cletSocialMobile" />
+
+
+        <EditText
+            android:id="@+id/etSocialEmail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:drawableStart="@drawable/noun_message_1985244"
+            android:drawablePadding="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/round_stroke"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:hint="@string/email"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSocialEmail"/>
+
+        <TextView
+            android:id="@+id/tvSocialLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/round_corner_bg"
+            android:fontFamily="@font/nunitosans_regular"
+            android:gravity="center"
+            android:text="@string/login_welcome"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSocialEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

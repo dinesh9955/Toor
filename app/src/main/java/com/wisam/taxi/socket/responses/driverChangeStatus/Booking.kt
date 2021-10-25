@@ -1,0 +1,33 @@
+package com.wisam.taxi.socket.responses.driverChangeStatus
+
+data class Booking(
+    val __v: Int,
+    val _id: String,
+    val bookingEndDate: Long,
+    val bookingStartDate: Long,
+    val bookingType: Int,
+    val couponCode: String,
+    val couponDiscount: String,
+    val createdAt: String,
+    val date: Long,
+    val destination: Destination,
+    val distance: Int,
+    val driverId: DriverId,
+    val driverRating: Double,
+    val driverReachTime: Int,
+    val id: String,
+    val note: String,
+    val path: String,
+    val paymentMode: String,
+    val seats: Int,
+    val source: Source,
+    val status: Int,
+    val subTotalAmount: Int,
+    val tax: Int,
+    val taxiOrderNo: Int,
+    val totalAmount: Int,
+    val totalDiscount: Int,
+    val updatedAt: String,
+    val userId: UserId,
+    val userRating: Double
+)

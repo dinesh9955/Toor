@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "784745423493",
+    "firebase_url": "https://basmaya-703b7.firebaseio.com",
+    "project_id": "basmaya-703b7",
+    "storage_bucket": "basmaya-703b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784745423493:android:1a32e124179f5d67f3ffec",
+        "android_client_info": {
+          "package_name": "com.wisam.taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784745423493-aess38m6fcjr0fe129a2gqv5jd400f4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wisam.taxi",
+            "certificate_hash": "05692486060b4fc400ffcbdc83cde169d6572bd4"
+          }
+        },
+        {
+          "client_id": "784745423493-rqpgkmhii22hv7kf70bgbucn63imedgn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHBpwfLb7acFwnHx6XSekfPJxw_b44Dkk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784745423493-rqpgkmhii22hv7kf70bgbucn63imedgn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

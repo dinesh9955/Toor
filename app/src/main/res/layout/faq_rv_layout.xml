@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/faqMainBg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivFaqArrow"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:src="@drawable/down_arrow"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tvFaqQues"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFaqQues" />
+
+    <TextView
+        android:id="@+id/tvFaqQues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitosans_bold"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_30sdp"
+        android:gravity="start"
+        android:linksClickable="true"
+        android:autoLink="all"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFaqAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunitosans_bold"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:gravity="start"
+        android:visibility="gone"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@color/_1a1824"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFaqQues"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

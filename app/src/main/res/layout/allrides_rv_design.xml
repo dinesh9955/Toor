@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAllridesRvTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@+id/clAllridesRvBottom"
+        app:layout_constraintEnd_toEndOf="@+id/clAllridesRvBottom"
+        app:layout_constraintStart_toStartOf="@+id/clAllridesRvBottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCustomerProfile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/image_9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAllridesRvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCustomerProfile"
+            app:layout_constraintEnd_toStartOf="@+id/cvAllridesPhone"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/ivCustomerProfile"
+            app:layout_constraintTop_toTopOf="@+id/ivCustomerProfile">
+
+            <TextView
+                android:id="@+id/ivAllRidesRvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="Antwain"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/ivAllRidesRvAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/ivAllRidesRvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular"
+                android:text="National Park, Bismayah"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivAllRidesRvName"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cvAllridesPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/circle_bg_withshadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clAllridesRvName"
+            app:layout_constraintTop_toTopOf="@+id/clAllridesRvName"
+            app:layout_constraintBottom_toBottomOf="@+id/clAllridesRvName">
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/phone_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAllridesRvBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clAllridesRvTop">
+
+        <ImageView
+            android:id="@+id/ivCircle"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ellipse_497"
+            app:layout_constraintBottom_toBottomOf="@+id/tvallRidesSource"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvallRidesSource" />
+
+        <TextView
+            android:id="@+id/tvallRidesSource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunitosans_bold"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="Bismaya"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAllRidesDistance"
+            app:layout_constraintStart_toEndOf="@+id/ivCircle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/location"
+            app:layout_constraintBottom_toTopOf="@+id/tvAllRidesStatus"
+            app:layout_constraintEnd_toStartOf="@+id/tvAllRidesDistance"
+            app:layout_constraintTop_toBottomOf="@+id/tvallRidesSource"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvAllRidesDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_thin"
+            android:paddingEnd="@dimen/_3sdp"
+            android:text="30 KM"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvAllRidesStatus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvallRidesSource"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:layout_width="@dimen/_2sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/line_19"
+            app:layout_constraintBottom_toTopOf="@+id/ivmapDestination"
+            app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+            app:layout_constraintStart_toStartOf="@+id/ivCircle"
+            app:layout_constraintTop_toBottomOf="@+id/ivCircle" />
+
+        <ImageView
+            android:id="@+id/ivmapDestination"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/pin_2"
+            app:layout_constraintBottom_toTopOf="@+id/ivAllRidesPin"
+            app:layout_constraintStart_toStartOf="@id/ivCircle" />
+
+        <TextView
+            android:id="@+id/tvAllRidesDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunitosans_bold"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="Baghdad in the Begin of Mohamed al Kasim Highway"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivmapDestination"
+            app:layout_constraintEnd_toStartOf="@+id/tvAllRidesStatwithBg"
+            app:layout_constraintStart_toEndOf="@+id/ivmapDestination"
+            app:layout_constraintTop_toTopOf="@+id/ivmapDestination" />
+
+        <TextView
+            android:id="@+id/tvAllRidesStatwithBg"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="Completed"
+            android:background="@drawable/round_corner_bg_without_padding"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivmapDestination"
+            app:layout_constraintEnd_toEndOf="@id/tvAllRidesDistance"
+            app:layout_constraintTop_toTopOf="@+id/ivmapDestination" />
+
+        <TextView
+            android:id="@+id/tvAllRidesStatwithGreen"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="Completed"
+            android:background="@drawable/round_corner_green_bg_without_padding"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivmapDestination"
+            app:layout_constraintEnd_toEndOf="@id/tvallRidesSource"
+            app:layout_constraintTop_toTopOf="@+id/ivmapDestination" />
+
+        <TextView
+            android:id="@+id/tvAllRidesStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="Completed"
+            android:paddingEnd="@dimen/_3sdp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivmapDestination"
+            app:layout_constraintEnd_toEndOf="@+id/tvAllRidesDistance"
+            app:layout_constraintTop_toTopOf="@+id/ivmapDestination" />
+
+        <ImageView
+            android:id="@+id/ivAllRidesPin"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:src="@drawable/calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ivmapDestination" />
+
+        <TextView
+            android:id="@+id/tvAllRidesTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunitosans_light"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="July 24, 2020, 9:58 AM"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAllRidesPin"
+            app:layout_constraintEnd_toEndOf="@+id/tvAllRidesDistance"
+            app:layout_constraintStart_toEndOf="@+id/ivAllRidesPin"
+            app:layout_constraintTop_toTopOf="@+id/ivAllRidesPin" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorLightGrey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

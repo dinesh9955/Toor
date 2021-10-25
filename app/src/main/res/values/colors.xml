@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0b8793</color>
+    <color name="colorPrimaryDark">#0b8793</color>
+    <color name="colorAccent">#009a24</color>
+    <color name="red">#ff656b</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLightBlack">#232d3b</color>
+    <color name="colorLightGrey">#d9d9d9</color>
+
+    <!-- home fragment colors -->
+    <color name="tab_unselected">#ffffff</color>
+    <color name="colorLightestGrey">#eeeeee</color>
+    <color name="_1a1824">#1a1824</color>
+    <color name="_919191">#919191</color>
+
+    <color name="_1E009A24">#1E009A24</color>
+
+</resources>

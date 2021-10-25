@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/round_corner_bg_without_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundcorner_without_stroke">
+
+            <TextView
+                android:id="@+id/confirmAlertAYSTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:text="@string/choose"
+                android:textColor="#000"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivchoosemediaCamera"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@color/colorWhite"
+                android:backgroundTint="@color/colorWhite"
+                android:src="@drawable/camera"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/tvchoosemediaCamera"
+                app:layout_constraintStart_toStartOf="@+id/confirmAlertAYSTv"
+                app:layout_constraintTop_toTopOf="@+id/tvchoosemediaCamera" />
+
+            <TextView
+                android:id="@+id/tvchoosemediaCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:text="@string/camera"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_15sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivchoosemediaGallery"
+                app:layout_constraintTop_toBottomOf="@+id/confirmAlertAYSTv" />
+
+            <ImageView
+                android:id="@+id/ivchoosemediaGallery"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@color/colorWhite"
+                android:backgroundTint="@color/colorWhite"
+                android:src="@drawable/gallery"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/tvchoosemediaGallery"
+                app:layout_constraintStart_toStartOf="@+id/confirmAlertAYSTv"
+                app:layout_constraintTop_toTopOf="@+id/tvchoosemediaGallery" />
+
+            <TextView
+                android:id="@+id/tvchoosemediaGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="@string/gallery"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="#000000"
+                android:paddingVertical="@dimen/_15sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivchoosemediaGallery"
+                app:layout_constraintTop_toBottomOf="@+id/tvchoosemediaCamera" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvchoosemediaGallery" />
+
+
+            <TextView
+                android:id="@+id/tvchoosemediaCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:padding="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_25sdp"
+                android:text="@string/cancel"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="#000000"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvchoosemediaGallery"
+                app:layout_constraintStart_toStartOf="@+id/tvchoosemediaGallery"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

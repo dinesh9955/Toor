@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.driverModule.routes.RoutesActivity">
+
+    <TextView
+        android:id="@+id/tvRoutesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/viewRoutes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@+id/tvRoutesTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRoutesTitle"
+        >
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchRoutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:checked="true"
+            android:fontFamily="@font/nunitosans_bold"
+            android:thumb="@drawable/thumb_selector_explore"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showText="false"
+            app:track="@drawable/track_selector_explore" />
+
+        <TextView
+            android:id="@+id/tvSwitchRoutesOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:gravity="end"
+            android:text="@string/inactive"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_6sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/switchRoutes"
+            app:layout_constraintEnd_toEndOf="@+id/switchRoutes"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/switchRoutes"
+            app:layout_constraintTop_toTopOf="@+id/switchRoutes" />
+
+        <TextView
+            android:id="@+id/tvActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_bold"
+            android:gravity="start"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="@string/active"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/switchRoutes"
+            app:layout_constraintEnd_toEndOf="@+id/switchRoutes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/switchRoutes"
+            app:layout_constraintTop_toTopOf="@+id/switchRoutes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewRoutes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@color/colorLightGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRoutesTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRoutes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:theme="@style/CustomRvTheme"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/tab_unselected"
+        app:layout_constraintBottom_toTopOf="@+id/tvRoutesNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRoutes" />
+
+    <TextView
+        android:id="@+id/tvRoutesNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/round_corner_bg"
+        android:fontFamily="@font/nunitosans_regular"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

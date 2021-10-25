@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvBooingConfProfile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:elevation="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/ivBookingConfBack">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@color/transparent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivBooingConfProfile"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/group_445"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDriverName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/nunitosans_semibold"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:text="User Name"
+            android:ellipsize="end"
+            android:textColor="#232323"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toStartOf="@+id/ivBooingConfCar"
+            app:layout_constraintBottom_toTopOf="@+id/ivBooingConfview"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfProfile" />
+
+
+        <TextView
+            android:id="@+id/tvBooingConfPas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:fontFamily="@font/nunitosans_semibold"
+            android:textColor="#929292"
+            android:text="4 passangers"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfPas"
+            app:layout_constraintTop_toBottomOf="@+id/ivBooingConfview" />
+
+        <ImageView
+            android:id="@+id/ivBooingConfPas"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/audience"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfPas"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfview"
+            app:layout_constraintTop_toBottomOf="@+id/ivBooingConfview" />
+
+        <View
+            android:id="@+id/ivBooingConfview"
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBooingConfProfile"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfProfile"
+            app:layout_constraintTop_toTopOf="@+id/ivBooingConfProfile" />
+
+        <ImageView
+            android:id="@+id/ivBooingConfCar"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/swift_desire_1"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfPas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfPas"
+            app:layout_constraintTop_toTopOf="@+id/ivBooingConfProfile" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTimeVa"
+            app:layout_constraintEnd_toEndOf="@+id/ivBooingConfCar"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfPas"
+            app:layout_constraintTop_toBottomOf="@+id/ivBooingConfCar">
+
+            <ImageView
+                android:id="@+id/ivCircle"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ellipse_497"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSource"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSource" />
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitosans_bold"
+                android:maxLines="2"
+                android:text="Source Address"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCircle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/viewVrtical"
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/line_19"
+                app:layout_constraintBottom_toTopOf="@+id/ivmapDestination"
+                app:layout_constraintEnd_toEndOf="@+id/ivCircle"
+                app:layout_constraintStart_toStartOf="@+id/ivCircle"
+                app:layout_constraintTop_toBottomOf="@+id/ivCircle" />
+
+            <ImageView
+                android:id="@+id/ivmapDestination"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/pin_2"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDestination"
+                app:layout_constraintStart_toStartOf="@id/ivCircle"
+                app:layout_constraintTop_toTopOf="@+id/tvDestination" />
+
+            <TextView
+                android:id="@+id/tvDestination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitosans_bold"
+                android:maxLines="2"
+                android:text="Destination Address"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivmapDestination"
+                app:layout_constraintTop_toBottomOf="@+id/viewVrtical" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBooingConfRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="2dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/ivBooingConfProfile"
+            app:layout_constraintStart_toStartOf="@+id/ivBooingConfProfile"
+            app:layout_constraintTop_toBottomOf="@+id/ivBooingConfProfile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_2sdp">
+
+                <ImageView
+                    android:id="@+id/ivBooingConfStar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:src="@drawable/star_1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfRating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvBooingConfRating" />
+
+                <TextView
+                    android:id="@+id/tvBooingConfRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:fontFamily="@font/nunitosans_bold"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivBooingConfStar"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvBooingConfTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/nunitosans_regular"
+            android:textColor="#222b45"
+            android:textSize="@dimen/_7sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvBooingConfPas"
+            app:layout_constraintStart_toStartOf="@+id/ivBooingConfProfile"
+            app:layout_constraintTop_toBottomOf="@+id/cvBooingConfRating" />
+
+        <ImageView
+            android:id="@+id/ivBooingConfIrd"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/iraq_40_237283"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfValue"
+            app:layout_constraintStart_toStartOf="@+id/tvBooingConfTime"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfValue" />
+
+        <TextView
+            android:id="@+id/tvBooingConfValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:paddingStart="@dimen/_3sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfIrd"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfTime"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivBooingConfclock"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/group_38"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBooingConfTimeVa"
+            app:layout_constraintStart_toEndOf="@+id/tvBooingConfValue"
+            app:layout_constraintTop_toTopOf="@+id/tvBooingConfTimeVa" />
+
+        <TextView
+            android:id="@+id/tvBooingConfTimeVa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:paddingStart="@dimen/_3sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBooingConfclock"
+            app:layout_constraintTop_toBottomOf="@+id/tvBooingConfTime"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

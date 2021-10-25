@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.verification.activity.EditProfileOtpVerifyActivity">
+
+    <ImageView
+        android:id="@+id/ivOtpBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/left_arrow"
+        android:tint="@color/colorBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/ivOtpBack"
+        app:layout_constraintBottom_toTopOf="@id/verifyBtn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:textSize="@dimen/_25sdp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:textColor="#000000"
+                android:text="@string/otpverify_title"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/text03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#000000"
+                android:text="@string/enter_the_3digit_number"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text01"
+                />
+            <TextView
+                android:id="@+id/tvMobileNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="#000000"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text03"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMobileNum"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layoutDirection="ltr"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/digit01"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunitosans_regular"
+                        android:textSize="@dimen/_28sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:background="@drawable/square_stroke_bg"
+                        android:maxLength="1"
+                        android:cursorVisible="false"
+                        android:inputType="number"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/digit02"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunitosans_regular"
+                        android:textSize="@dimen/_28sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:background="@drawable/square_stroke_bg"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:cursorVisible="false"
+                        android:textColor="#000000"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/digit03"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunitosans_regular"
+                        android:textSize="@dimen/_28sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:background="@drawable/square_stroke_bg"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:cursorVisible="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/digit04"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunitosans_regular"
+                        android:textSize="@dimen/_28sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:background="@drawable/square_stroke_bg"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:cursorVisible="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@drawable/round_corner_bg"
+        android:fontFamily="@font/nunitosans_regular"
+        android:text="@string/verify_otp"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/timerAndResend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/timerAndResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:focusable="true"
+        android:fontFamily="@font/nunitosans_regular"
+        android:text="00:30"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/verifyBtn"
+        app:layout_constraintStart_toStartOf="@+id/verifyBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

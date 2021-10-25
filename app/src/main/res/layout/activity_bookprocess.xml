@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.wisam.taxi.view.booking.activity.BookingProcessingActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintStart_toStartOf="@+id/tvBookingProc"
+        app:layout_constraintEnd_toEndOf="@+id/tvBookingProc"
+        app:layout_constraintBottom_toTopOf="@+id/tvBookingProc"
+        android:src="@drawable/loader"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/tvBookingProc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunitosans_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/weareprocessing"
+        android:textColor="#222b45"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <ImageView
+        android:id="@+id/ivBookingCar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        app:layout_constraintStart_toStartOf="@+id/tvBookingProc"
+        app:layout_constraintEnd_toEndOf="@+id/tvBookingProc"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookingProc"
+        android:src="@drawable/swift_desire_1"
+        android:layout_marginTop="@dimen/_30sdp"/>
+
+
+    <TextView
+        android:id="@+id/tvBookingCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/round_corner_bg"
+        android:fontFamily="@font/nunitosans_regular"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookingCar"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
