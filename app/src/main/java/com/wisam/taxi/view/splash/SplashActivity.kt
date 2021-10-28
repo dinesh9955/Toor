@@ -1,14 +1,21 @@
 package com.wisam.taxi.view.splash
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.Manifest
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.*
 import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
+import android.provider.Settings
 import android.util.Base64
 import android.util.Log
+import androidx.core.app.ActivityCompat
+import com.patchoguefd.util.Utility
 import com.wisam.taxi.R
 import com.wisam.taxi.base.BaseActivity
 import com.wisam.taxi.base.WisamTaxiApplication
@@ -30,6 +37,9 @@ import java.security.NoSuchAlgorithmException
 
 class SplashActivity : BaseActivity() {
     lateinit var mSocket: Socket
+
+    val REQUEST_ID_MULTIPLE_PERMISSIONS = 1999
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -70,11 +80,40 @@ class SplashActivity : BaseActivity() {
 
 
         Handler().postDelayed({
-            handlenavigation()
+            if (Utility.checkAndRequestPermissions(
+                    this@SplashActivity,
+                    REQUEST_ID_MULTIPLE_PERMISSIONS
+                )
+            ) {
+                // requestPermission();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    if (Environment.isExternalStorageManager()) {
+                        handlenavigation()
+                    } else {
+                        showDialogOK(this@SplashActivity,
+                            "Allow permission for storage access!",
+                            DialogInterface.OnClickListener { dialog, which ->
+                                when (which) {
+                                    DialogInterface.BUTTON_POSITIVE -> requestPermission()
+                                    DialogInterface.BUTTON_NEGATIVE -> {
+                                    }
+                                }
+                            })
+                    }
+                }
+            } else {
+            }
         }, 1500)
 
 
+
+
+
     }
+
+
+
+
 
     fun getSocket(): Socket {
         return mSocket
@@ -95,8 +134,8 @@ class SplashActivity : BaseActivity() {
                 navigateWithFinish(ChooseUserTypeActivity::class.java)
             else
             {
-                val langintent = Intent(this,LanguageSelectionActivity::class.java)
-                langintent.putExtra("intentfrom","splash")
+                val langintent = Intent(this, LanguageSelectionActivity::class.java)
+                langintent.putExtra("intentfrom", "splash")
                 startActivity(langintent)
                 finish()
             }
@@ -122,5 +161,117 @@ class SplashActivity : BaseActivity() {
     override fun onPause() {
         super.onPause()
         unregisterReceiver(broadcastReceiver)
+    }
+
+
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        when (requestCode) {
+            REQUEST_ID_MULTIPLE_PERMISSIONS -> {
+                if (Utility.checkAdditionPermissionsCheck(
+                        this@SplashActivity,
+                        permissions as Array<String>,
+                        grantResults,
+                        REQUEST_ID_MULTIPLE_PERMISSIONS
+                    )
+                ) {
+                    //requestPermission();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                        if (Environment.isExternalStorageManager()) {
+                            handlenavigation()
+                        } else {
+                            showDialogOK(this,
+                                "Allow permission for storage access!",
+                                DialogInterface.OnClickListener { dialog, which ->
+                                    when (which) {
+                                        DialogInterface.BUTTON_POSITIVE -> requestPermission()
+                                        DialogInterface.BUTTON_NEGATIVE -> {
+                                        }
+                                    }
+                                })
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    @SuppressLint("NewApi")
+    private fun requestPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (Environment.isExternalStorageManager()) {
+                handlenavigation()
+            } else {
+                try {
+                    val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+                    intent.addCategory("android.intent.category.DEFAULT")
+                    intent.data =
+                        Uri.parse(
+                            java.lang.String.format(
+                                "package:%s",
+                                applicationContext.packageName
+                            )
+                        )
+                    startActivityForResult(intent, 2296)
+                } catch (e: Exception) {
+                    val intent = Intent()
+                    intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
+                    startActivityForResult(intent, 2296)
+                }
+            }
+        } else {
+            //below android 11
+            ActivityCompat.requestPermissions(
+                this@SplashActivity,
+                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                234
+            )
+        }
+    }
+
+
+    private fun showDialogOK(
+        splashScreen: Activity,
+        message: String,
+        okListener: DialogInterface.OnClickListener
+    ) {
+        AlertDialog.Builder(splashScreen)
+            .setMessage(message)
+            .setCancelable(false)
+            .setPositiveButton("OK", okListener)
+            .setNegativeButton("CANCEL", okListener)
+            .create()
+            .show()
+    }
+
+
+    @SuppressLint("NewApi")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 2296) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                if (Environment.isExternalStorageManager()) {
+                    //Toast.makeText(this, "Allow permission for storage access!111111111", Toast.LENGTH_SHORT).show();
+                    handlenavigation()
+                } else {
+                    //Toast.makeText(this, "Allow permission for storage access!", Toast.LENGTH_SHORT).show();
+                    showDialogOK(this,
+                        "Allow permission for storage access!",
+                        DialogInterface.OnClickListener { dialog, which ->
+                            when (which) {
+                                DialogInterface.BUTTON_POSITIVE -> requestPermission()
+                                DialogInterface.BUTTON_NEGATIVE -> {
+                                }
+                            }
+                        })
+                }
+            }
+        }
     }
 }
