@@ -85,22 +85,23 @@ class SplashActivity : BaseActivity() {
                     REQUEST_ID_MULTIPLE_PERMISSIONS
                 )
             ) {
+                handlenavigation()
                 // requestPermission();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                    if (Environment.isExternalStorageManager()) {
-                        handlenavigation()
-                    } else {
-                        showDialogOK(this@SplashActivity,
-                            "Allow permission for storage access!",
-                            DialogInterface.OnClickListener { dialog, which ->
-                                when (which) {
-                                    DialogInterface.BUTTON_POSITIVE -> requestPermission()
-                                    DialogInterface.BUTTON_NEGATIVE -> {
-                                    }
-                                }
-                            })
-                    }
-                }
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//                    if (Environment.isExternalStorageManager()) {
+//                        handlenavigation()
+//                    } else {
+//                        showDialogOK(this@SplashActivity,
+//                            "Allow permission for storage access!",
+//                            DialogInterface.OnClickListener { dialog, which ->
+//                                when (which) {
+//                                    DialogInterface.BUTTON_POSITIVE -> requestPermission()
+//                                    DialogInterface.BUTTON_NEGATIVE -> {
+//                                    }
+//                                }
+//                            })
+//                    }
+//                }
             } else {
             }
         }, 1500)
@@ -180,98 +181,99 @@ class SplashActivity : BaseActivity() {
                         REQUEST_ID_MULTIPLE_PERMISSIONS
                     )
                 ) {
-                    //requestPermission();
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                        if (Environment.isExternalStorageManager()) {
-                            handlenavigation()
-                        } else {
-                            showDialogOK(this,
-                                "Allow permission for storage access!",
-                                DialogInterface.OnClickListener { dialog, which ->
-                                    when (which) {
-                                        DialogInterface.BUTTON_POSITIVE -> requestPermission()
-                                        DialogInterface.BUTTON_NEGATIVE -> {
-                                        }
-                                    }
-                                })
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-    @SuppressLint("NewApi")
-    private fun requestPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            if (Environment.isExternalStorageManager()) {
-                handlenavigation()
-            } else {
-                try {
-                    val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-                    intent.addCategory("android.intent.category.DEFAULT")
-                    intent.data =
-                        Uri.parse(
-                            java.lang.String.format(
-                                "package:%s",
-                                applicationContext.packageName
-                            )
-                        )
-                    startActivityForResult(intent, 2296)
-                } catch (e: Exception) {
-                    val intent = Intent()
-                    intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
-                    startActivityForResult(intent, 2296)
-                }
-            }
-        } else {
-            //below android 11
-            ActivityCompat.requestPermissions(
-                this@SplashActivity,
-                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                234
-            )
-        }
-    }
-
-
-    private fun showDialogOK(
-        splashScreen: Activity,
-        message: String,
-        okListener: DialogInterface.OnClickListener
-    ) {
-        AlertDialog.Builder(splashScreen)
-            .setMessage(message)
-            .setCancelable(false)
-            .setPositiveButton("OK", okListener)
-            .setNegativeButton("CANCEL", okListener)
-            .create()
-            .show()
-    }
-
-
-    @SuppressLint("NewApi")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 2296) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                if (Environment.isExternalStorageManager()) {
-                    //Toast.makeText(this, "Allow permission for storage access!111111111", Toast.LENGTH_SHORT).show();
                     handlenavigation()
-                } else {
-                    //Toast.makeText(this, "Allow permission for storage access!", Toast.LENGTH_SHORT).show();
-                    showDialogOK(this,
-                        "Allow permission for storage access!",
-                        DialogInterface.OnClickListener { dialog, which ->
-                            when (which) {
-                                DialogInterface.BUTTON_POSITIVE -> requestPermission()
-                                DialogInterface.BUTTON_NEGATIVE -> {
-                                }
-                            }
-                        })
+                    //requestPermission();
+//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//                        if (Environment.isExternalStorageManager()) {
+//                            handlenavigation()
+//                        } else {
+//                            showDialogOK(this,
+//                                "Allow permission for storage access!",
+//                                DialogInterface.OnClickListener { dialog, which ->
+//                                    when (which) {
+//                                        DialogInterface.BUTTON_POSITIVE -> requestPermission()
+//                                        DialogInterface.BUTTON_NEGATIVE -> {
+//                                        }
+//                                    }
+//                                })
+//                        }
+//                    }
                 }
             }
         }
     }
+
+//
+//    @SuppressLint("NewApi")
+//    private fun requestPermission() {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//            if (Environment.isExternalStorageManager()) {
+//                handlenavigation()
+//            } else {
+//                try {
+//                    val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+//                    intent.addCategory("android.intent.category.DEFAULT")
+//                    intent.data =
+//                        Uri.parse(
+//                            java.lang.String.format(
+//                                "package:%s",
+//                                applicationContext.packageName
+//                            )
+//                        )
+//                    startActivityForResult(intent, 2296)
+//                } catch (e: Exception) {
+//                    val intent = Intent()
+//                    intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
+//                    startActivityForResult(intent, 2296)
+//                }
+//            }
+//        } else {
+//            //below android 11
+//            ActivityCompat.requestPermissions(
+//                this@SplashActivity,
+//                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+//                234
+//            )
+//        }
+//    }
+//
+//
+//    private fun showDialogOK(
+//        splashScreen: Activity,
+//        message: String,
+//        okListener: DialogInterface.OnClickListener
+//    ) {
+//        AlertDialog.Builder(splashScreen)
+//            .setMessage(message)
+//            .setCancelable(false)
+//            .setPositiveButton("OK", okListener)
+//            .setNegativeButton("CANCEL", okListener)
+//            .create()
+//            .show()
+//    }
+//
+//
+//    @SuppressLint("NewApi")
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode == 2296) {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//                if (Environment.isExternalStorageManager()) {
+//                    //Toast.makeText(this, "Allow permission for storage access!111111111", Toast.LENGTH_SHORT).show();
+//                    handlenavigation()
+//                } else {
+//                    //Toast.makeText(this, "Allow permission for storage access!", Toast.LENGTH_SHORT).show();
+//                    showDialogOK(this,
+//                        "Allow permission for storage access!",
+//                        DialogInterface.OnClickListener { dialog, which ->
+//                            when (which) {
+//                                DialogInterface.BUTTON_POSITIVE -> requestPermission()
+//                                DialogInterface.BUTTON_NEGATIVE -> {
+//                                }
+//                            }
+//                        })
+//                }
+//            }
+//        }
+//    }
 }

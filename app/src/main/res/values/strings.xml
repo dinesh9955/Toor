@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Toor</string>
 
 <!--    <string name="facebook_app_id">658270215001076</string>-->
@@ -183,7 +183,7 @@
     <string name="driver">Driver Available</string>
     <string name="pleaseaccepttermandcondition">Please accept our Terms of Services and Privacy Policy.</string>
     <string name="pleaseselectcountrycode">Please select a country code.</string>
-    <string name="vehiclemodel">Vehicle Model</string>
+    <string name="vehiclemodel" tools:ignore="MissingTranslation">Vehicle Model</string>
 
 
 </resources>
